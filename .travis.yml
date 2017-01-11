@@ -10,6 +10,8 @@ cache:
 install:
     - pip install -U platformio
 
-script:
-    - platformio run
+    - wget https://github.com/marvinroger/homie-esp8266/archive/develop.zip -O /tmp/homie2.zip
+    - unzip /tmp/homie2.zip -d /tmp
 
+script:
+    - platformio ci --lib="/tmp/homie2" --board=d1_mini
