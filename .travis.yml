@@ -16,5 +16,7 @@ install:
     - wget https://github.com/marvinroger/homie-esp8266/archive/develop.zip -O /tmp/homie2.zip
     - unzip /tmp/homie2.zip -d /tmp
 
+    - platformio lib -g install 64 346 1106 31 16 246
+
 script:
     - platformio ci --lib="/tmp/homie-esp8266-develop" --board=d1_mini
