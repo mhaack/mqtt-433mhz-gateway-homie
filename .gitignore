@@ -1,0 +1,5 @@
+.pioenvs
+.piolibdeps
+lib
+platformio.sublime-project
+platformio.sublime-workspace
