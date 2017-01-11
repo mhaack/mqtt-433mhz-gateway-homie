@@ -7,6 +7,9 @@ cache:
     directories:
         - "~/.platformio"
 
+env:
+     - PLATFORMIO_CI_SRC=src/mqtt-gateway-with-temp.ino
+
 install:
     - pip install -U platformio
 
@@ -14,4 +17,4 @@ install:
     - unzip /tmp/homie2.zip -d /tmp
 
 script:
-    - platformio ci --lib="/tmp/homie2" --board=d1_mini
+    - platformio ci --lib="/tmp/homie-esp8266-develop" --board=d1_mini
