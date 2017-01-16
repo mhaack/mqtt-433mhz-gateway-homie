@@ -25,12 +25,16 @@ and an [enclosure](https://www.amazon.de/gp/product/B00PZYMLJ4) to hold all toge
 
 ### Building the circuit
 
-Wemos D1 mini | ...
-------------- | ------------ 
-5V            | X
-GND           | GND
-GND           | X
-GND           | X
+![mqtt-433mhz-gateway-homie](img/mqtt-433mhz-gateway-homie.jpg)
+
+Wemos D1 mini | BMP085 | RF Reveiver | RF Transmitter
+------------- | ------ | ----------- | --------------
+5V            | VIN    | VIN         | VIN
+GND           | GND    | GND         | GND
+D0            |        |             | DATA
+D1            | SCL    |             |
+D2            | SDA    |             |
+D5            |        | DATA        |
 
 ## Software
 
@@ -51,6 +55,19 @@ Parameter           | Type        | Usage
 temperatureInterval | long        | temperature reading interval in seconds
 temperatureOffset   | double      | temperature offset (-/+) to correct the sensor reading, for example if used in enclosure box
 channels            | const char* | mapping of 433MHz signals to mqtt channels, useful if used with OpenHab
+
+All configs can be set during the init proccedure of the module or via MQTT messages (see Homie specification).
+
+Sampe config:
+
+    {
+        "settings": {
+            "channels": "o-1:[139400];o-2:[139707];o-3:[1398097,1398100];o-4:[139803];i-1:[44618];i-2:[44620];i-3:[44623];i-4:[44638];i-5:[44700];“,
+            "temperatureOffset“: -2.4,
+            "temperatureInterval": 300
+        }
+    }
+
 
 ## Credits
 
