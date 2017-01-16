@@ -25,7 +25,7 @@ and an [enclosure](https://www.amazon.de/gp/product/B00PZYMLJ4) to hold all toge
 
 ### Building the circuit
 
-![mqtt-433mhz-gateway-homie](img/mqtt-433mhz-gateway-homie.jpg)
+<img src="https://github.com/mhaack/mqtt-433mhz-gateway-homie/blob/master/img/mqtt-gateway-with-temp.jpg" width="640">
 
 Wemos D1 mini | BMP085 | RF Reveiver | RF Transmitter
 ------------- | ------ | ----------- | --------------
