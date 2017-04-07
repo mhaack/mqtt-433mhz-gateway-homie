@@ -8,7 +8,7 @@ cache:
         - "~/.platformio"
 
 env:
-     - PLATFORMIO_CI_SRC=src/mqtt-gateway-with-temp.ino
+     - PLATFORMIO_CI_SRC=src
 
 install:
     - pip install -U platformio
@@ -16,8 +16,7 @@ install:
     - wget https://github.com/marvinroger/homie-esp8266/archive/develop.zip -O /tmp/homie2.zip
     - unzip /tmp/homie2.zip -d /tmp
 
-    - platformio lib install "ArduinoJson" "AsyncMqttClient" "Bounce2" "Adafruit Unified Sensor" "Adafruit BMP085 Unified" "RCSwitch"
-    - platformio lib update
+    - platformio lib -g install "ArduinoJson" "AsyncMqttClient" "Bounce2" "Adafruit Unified Sensor" "Adafruit BMP085 Unified" "RCSwitch"
 
 script:
     - platformio ci --lib="/tmp/homie-esp8266-develop" --board=d1_mini --board=nodemcuv2
