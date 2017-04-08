@@ -46,6 +46,25 @@ The following software libraries are used. When using PlatformIO all dependencie
 - [Adafruit Unified Sensor](https://github.com/adafruit/Adafruit_Sensor)
 - Optionally PlatformIO environment for building the code
 
+## MQTT
+For a detail documentation of the MQTT topics and commands used see [Homie documentation](https://homie-esp8266.readme.io/docs).
+
+Sample gateway messages:
+
+```
+# sensor temperature reading
+homie/mqtt-gateway-livingroom/temperature/degrees 23.70
+```
+Temperature value send form device.
+
+```
+# send RF command via MQTT & response
+homie/mqtt-gateway-livingroom/MQTTto433/on/set 1394001
+homie/mqtt-gateway-livingroom/MQTTto433/on 1394001
+```
+First line: MQTT command send from MQTT client or smart home solution. Translates into the code send by the RF transmitter.
+Second line: Response from device after RF signal was send.
+
 ## Config
 
 The following config parameters are available via MQTT message (see Homie documentation how to use):
