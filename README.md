@@ -47,7 +47,7 @@ The following software libraries are used. When using PlatformIO all dependencie
 - Optionally PlatformIO environment for building the code
 
 ## MQTT
-For a detail documentation of the MQTT topics and commands used see [Homie documentation](https://homie-esp8266.readme.io/docs).
+For a detailed documentation of the MQTT topics and commands used see [Homie documentation](https://homie-esp8266.readme.io/docs).
 
 Sample gateway messages:
 
