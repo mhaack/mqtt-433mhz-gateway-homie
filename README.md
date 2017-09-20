@@ -1,6 +1,7 @@
 # 433Mhz <-> MQTT gateway with some extras  
 
-[![Build Status](https://travis-ci.org/mhaack/mqtt-433mhz-gateway-homie.svg?branch=master)](https://travis-ci.org/mhaack/mqtt-433mhz-gateway-homie)
+[![Build Status](https://img.shields.io/travis/mhaack/mqtt-433mhz-gateway-homie.svg?style=flat-square)](https://travis-ci.org/mhaack/mqtt-433mhz-gateway-homie)
+[![GitHub release](https://img.shields.io/github/release/mhaack/mqtt-433mhz-gateway-homie.svg?style=flat-square)](https://github.com/mhaack/mqtt-433mhz-gateway-homie/releases)
 
 The mqtt-433mhz-gateway-homie project is a simple bidirectional gateway to transmit and receive 433Mhz RF signals connected to MQTT. The
 gateway is built with a cost-effective ESP8266 WiFi chip (I used a Wemos D1 mini, NodeMCU will do as well), simple 433Mhz RF modules and
@@ -21,7 +22,7 @@ The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) t
 - BMP085 or BMP180 sensor breakout
 
 I got the RF modules form https://www.sparkfun.com, others will do as well. Additional I got some [Wemos Protoboards](https://www.wemos.cc/product/protoboard.html), an USB power supply with a very short cable
-and an [enclosure](https://www.amazon.de/gp/product/B00PZYMLJ4) to hold all together.
+and an [enclosure](https://www.amazon.de/gp/product/B00PZYMLJ4) to keep all together.
 
 ### Building the circuit
 
